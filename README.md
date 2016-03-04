@@ -5,7 +5,6 @@
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-nvidia/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-nvidia)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-nvidia/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-nvidia)
 [![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-nvidia.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-nvidia)
-[ ![Codeship Status for sensu-plugins/sensu-plugins-nvidia](https://codeship.com/projects/a5eee1b0-edc1-0132-1e01-5a51cb58650a/status?branch=master)](https://codeship.com/projects/84109)
 
 ## Functionality
 

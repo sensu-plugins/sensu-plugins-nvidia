@@ -16,16 +16,19 @@ notifications:
     on_failure: always
 script:
 - bundle exec rake default
+- gem build sensu-plugins-nvidia.gemspec
+- gem install sensu-plugins-nvidia-*.gem
 deploy:
   provider: rubygems
   api_key:
-    secure: kkAAkquRYOyBEVhtlVFkwwLRAVaHYdQERr/AJgJ+KLmfCxqV1DtM9V2rl5smGLOkym28i4e5ahXEuz3Kuf5ArxVJvFexZPP+HMY0cOOiEuwQ+gMIBoDiVSYWLtPxQrq/uMYTC/z9Sq15E+yK/Nc1kirsnxRRWdvmYnr76dlyucs=
+    secure: My2XCFrEXTwD95gajcCgdwu0mWioDISKRBH2AG773jxQGZnsK9ABHOuIfGlyb3dgxFSCTQvFmeEnlgXrfiThyRF8Pn49aKl7BTqfSxutgabgleAt/CEj5zbfP08IQxueRnQaGx/1YwvGOc9qTyAADwewEr2Rd9aKRRmdM8pDbKg=
   gem: sensu-plugins-nvidia
   on:
     tags: true
+    repo: sensu-plugins/sensu-plugins-nvidia
     all_branches: true
     rvm: 1.9.3
     rvm: 2.0
     rvm: 2.1
     rvm: 2.2
-    repo: sensu-plugins/sensu-plugins-nvidia
+
