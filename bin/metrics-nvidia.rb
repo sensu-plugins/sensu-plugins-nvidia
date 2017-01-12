@@ -39,7 +39,6 @@ class EntropyGraphite < Sensu::Plugin::Metric::CLI::Graphite
          default: "#{Socket.gethostname}.nvidia"
 
   def run
-
     # get the slots for labelling multiple GPUs
     pci_slots = `nvidia-smi --query-gpu=pci.bus --format=csv,noheader`.scan(/^.+$/)
 
@@ -59,7 +58,7 @@ class EntropyGraphite < Sensu::Plugin::Metric::CLI::Graphite
       metrics.each do |key, value|
         output [[config[:scheme], pci_slots[pci_index]].join('.bus'), key].join('.'), value[pci_index], timestamp
       end
-      pci_index = pci_index + 1
+      pci_index += 1
     end
     ok
   end
