@@ -40,7 +40,7 @@ class EntropyGraphite < Sensu::Plugin::Metric::CLI::Graphite
 
   def run
     metrics = {}
-    keys = ['temperature.gpu', 'fan.speed', 'memory.used', 'memory.total', 'memory.free']
+    keys = ['temperature.gpu', 'fan.speed', 'memory.used', 'memory.total', 'memory.free', 'utilization.memory', 'utilization.gpu', 'power.draw']
     keys.each do |key|
       metrics[key] = `nvidia-smi --query-gpu=#{key} --format=csv,noheader`.match(/\d+\.?\d*/).to_s
     end
