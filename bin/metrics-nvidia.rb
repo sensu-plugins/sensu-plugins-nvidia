@@ -43,7 +43,7 @@ class EntropyGraphite < Sensu::Plugin::Metric::CLI::Graphite
     pci_slots = `nvidia-smi --query-gpu=pci.bus --format=csv,noheader`.scan(/^.+$/)
 
     metrics = {}
-    keys = ['temperature.gpu', 'fan.speed', 'memory.used', 'memory.total', 'memory.free']
+    keys = ['temperature.gpu', 'fan.speed', 'memory.used', 'memory.total', 'memory.free', 'utilization.memory', 'utilization.gpu', 'power.draw']
     keys.each do |key|
       metrics[key] = `nvidia-smi --query-gpu=#{key} --format=csv,noheader`.scan(/\d+\.?\d*/)
     end
