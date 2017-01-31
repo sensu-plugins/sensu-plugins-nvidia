@@ -3,7 +3,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachangelog.com/)
 
-## Unreleased
+## [Unreleased]
+### Added
+- added metrics for `utilization.gpu`, `utilization.memory` (in percent)
+- added metric for `power.draw` (in Watt)
+
 ### Changed
 - make metrics multi GPU aware
 
