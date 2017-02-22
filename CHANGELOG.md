@@ -5,12 +5,12 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 
 ## [Unreleased]
 ### Added
-- added metrics for `utilization.gpu`, `utilization.memory` (in percent)
-- added metric for `power.draw` (in Watt)
+- add metrics for `utilization.gpu`, `utilization.memory` (in percent) (@GhostLyrics)
+- add metric for `power.draw` (in Watts) (@GhostLyrics)
 - support for Ruby 2.3 (@eheydrick)
 
 ### Changed
-- make metrics multi GPU aware
+- make metrics multi GPU aware (@GhostLyrics)
 
 ### Removed
 - Support for Ruby < 2.1 (@eheydrick)
